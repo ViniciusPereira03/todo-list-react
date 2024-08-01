@@ -7,7 +7,104 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1a9; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424649a9; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333638a9; 
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #198754
+}
+
+button {
+  margin: 4px !important;
+  text-decoration: none !important;
+}
+
+#lista {
+  width: 80vw;
+  margin: auto;
+  margin-top: 8px;
+
+  height: 80vh;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  scroll-behavior: smooth;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #aaaaaa62;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li.completed {
+  background-color: #00ff880c;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.linha input {
+  width: 200px;
+}
+
+#bar {
+  width: 70vw;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.progress-bar {
+  background-color: #198754 !important;
+}
+
+@media only screen and (max-width: 920px) {
+  #lista {
+    width: 95%;
+  }
+  
+  #bar {
+    width: 95%;
+  }
+
+  .buttons {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
 }
